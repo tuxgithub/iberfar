@@ -1,0 +1,82 @@
+html{
+	height: 1920px;
+
+	body{
+		background: url("../images/fundo.jpg") no-repeat;
+		background-size: 100%;
+		height: 100%;
+		position: relative;
+
+		.menu{
+			position: absolute;
+			width: 940px;
+			height: 787px;
+		    top: 332px;
+		    left: 70px;
+			svg{
+				#logifarma, #ferrazlynce_1_, #iberfare, #grupoiberfare{
+					path{
+						&:hover{
+							fill: #ececec;
+						}
+					}
+				}
+			}
+		}
+
+		.barra-navegacao{
+			display: none;
+			position: absolute;
+			bottom: 504px;
+			margin-left: 70px;
+			img{
+				width: 100%;
+			}
+			svg{
+				position: relative;
+				bottom: 50px;
+				left: 70px;
+				width: 70px;
+				height: 70px;
+				g{
+					path{
+						&:hover{
+							fill: #eaeaea;
+						}
+					}
+				}
+			}
+		}
+
+		.ferrazlynce{
+			.logo{
+				width: 100%;
+				align: center;
+				margin-top: 70px;
+				margin-bottom: 120px;
+				margin-left: 230px;
+			}
+
+			embed{
+				margin-left: 70px;
+			}
+
+			.frase{
+				align: center;
+				margin-top: 84px;
+			}
+		}	
+
+		.logifarma{
+			svg{
+				display: none;
+				position: relative;
+				bottom: 50px;
+				right: 70px;
+				width: 70px;
+				height: 70px;
+			}
+		}
+	}
+
+}
