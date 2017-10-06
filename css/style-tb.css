@@ -1,5 +1,6 @@
 html {
-  height: 1920px; }
+  height: 1920px;
+  width: 1080px; }
   html body {
     background: url("../images/fundo.jpg") no-repeat;
     background-size: 100%;

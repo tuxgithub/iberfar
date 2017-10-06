@@ -1,0 +1,119 @@
+/************************************************
+				Var's
+***********************************************/
+$azul: #1f2b4e;
+$cinza: #ebebeb;
+$white: #ffffff;
+
+/************************************************
+				Iberfar - Videos
+***********************************************/
+.iberfar_container{
+	padding-top:61px;
+	margin-left:70px;
+	width:100%;
+	height:100%;
+	// background:red;
+}
+
+h1{
+	background: url("../images/caixa_titulo_iberfar.svg") no-repeat;
+	background-size:100%;
+	height: 230px;
+	width:940px;
+	text-align:center;
+    padding-top: 28px;
+    font-family: 'helveticabold';
+    font-size:40px;
+    line-height: 50px;
+    margin-bottom: 0;
+
+    color:$azul;
+
+	span{
+		display: block;
+		font-family: 'helvetica_lightregular';
+
+	}
+}
+
+.video{
+	width:940px;
+	height:527px;
+	background:$cinza;
+    position: relative;
+    margin-bottom: 80px;
+
+    video{
+    	width:100%;
+
+    }
+
+	&:after{
+	    content: url(../images/btn_play.png);
+	    width: 30px;
+	    height: 30px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: -36px;
+	    margin-left: -36px;
+	}
+
+	&.changeAfter:after{
+		display: none;
+	}
+
+	&:hover{
+		&:after{
+			content: url(../images/btn_play_hover.png);
+		}
+	}
+}
+
+.btnVideos{
+	ul{
+	    width: 940px;
+
+    	li{
+    		    width: 252px;
+			    height: 112px;
+			    background: red;
+			    margin-right: 50px;
+			    margin-left: 0px;
+			    margin-bottom: 15px;
+
+		        display: inline-flex;
+			    align-items: center;
+			    justify-content: center;
+			    text-align: center;
+			    vertical-align: top;
+
+			    font-size: 24px;
+			    font-family: 'helveticabold';
+		        line-height: 30px;
+
+		        background: url("../images/caixas_btn_filmes.svg") no-repeat;
+
+		        color:$azul;
+		        cursor: pointer;
+				&.selectedBtn{
+					background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
+		        	color:$white;
+				}
+
+		        &:hover{
+		        	background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
+		        	color:$white;
+		        }
+		       
+			    &:nth-child(3n){
+					margin-right: 0;
+			    }
+
+			    &:nth-child(n+7){
+					margin-bottom: 0;
+			    }
+    	}
+	}
+}
