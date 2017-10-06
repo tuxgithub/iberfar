@@ -1,0 +1,50 @@
+var app = angular.module("app",[]);
+app.service("lang", function(){
+
+  //possible to choose langs
+  var langs=[
+    {label:"English", symbol:"english", id:1},
+    {label:"Arabic", symbol:"arabic", id:2}
+  ];
+  
+  
+  //object contains lang texts used in app
+  var texts={
+    "english":{
+        "name":"Sherif",
+        "phone" :"(234)567-0988"
+    },
+    "arabic":{
+        "name":"شريف",
+        "phone": "(234)567-0988"
+    }
+    };
+  
+  
+  this.getLangueges = function(){
+    return langs;    
+  };
+  
+  this.setLanguage = function(lang){
+    this.language=lang;
+  };
+  
+  this.getLanguage = function(){
+    return this.language;  
+  };
+  
+  this.getText = function(symbol){
+    return texts[this.language.symbol][symbol];
+  };
+  
+  //set default as english
+  this.setLanguage(langs[0]);
+  
+});
+
+app.controller('controller', function(lang, $scope){
+  
+  //set service into view
+  $scope.lang = lang;
+  
+});
