@@ -72,6 +72,7 @@ h1{
 }
 
 .btnVideos{
+    margin-bottom: 60px;
 	ul{
 	    width: 940px;
 
@@ -117,3 +118,62 @@ h1{
     	}
 	}
 }
+
+
+.nav-bar{
+	width: 100%;
+	background: url('../images/bg-nav.png') repeat-x;
+	height: 79px;
+	position:relative;
+    width: 940px;
+
+    div{
+    	width: 70px;
+    	height: 70px;
+    	position: absolute;
+		cursor: pointer;
+
+		&.home{
+			left: 70px;
+    		background: url('../images/bt-home.png') no-repeat;
+    		&:hover{
+	    		background: url('../images/bt-home-hover.png') no-repeat;
+    		}
+
+    		&.selectedNav{
+	    		background: url('../images/bt-home-hover.png') no-repeat;
+    		}
+
+		}
+
+		&.pt{
+			right: 175px;
+    		background: url('../images/bt-pt.png') no-repeat;
+    		&:hover{
+	    		background: url('../images/bt-pt-hover.png') no-repeat;
+    		}
+
+    		&.selectedNav{
+	    		background: url('../images/bt-pt-hover.png') no-repeat;
+    		}
+
+		}
+
+		&.uk{
+			right: 70px;
+    		background: url('../images/bt-uk.png') no-repeat;
+    		&:hover{
+	    		background: url('../images/bt-uk-hover.png') no-repeat;
+    		}
+
+    		&.selectedNav{
+	    		background: url('../images/bt-uk-hover.png') no-repeat;
+    		}
+
+		}
+    }
+
+	
+
+}
+
