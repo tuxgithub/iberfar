@@ -6,7 +6,7 @@
 ***********************************************/
 .iberfar_container {
   padding-top: 61px;
-  margin-left: 70px;
+  padding-left: 70px;
   width: 100%;
   height: 100%; }
 
@@ -48,35 +48,70 @@ h1 {
   .video:hover:after {
     content: url(../images/btn_play_hover.png); }
 
-.btnVideos ul {
+.btnVideos {
+  margin-bottom: 60px; }
+  .btnVideos ul {
+    width: 940px; }
+    .btnVideos ul li {
+      width: 252px;
+      height: 112px;
+      background: red;
+      margin-right: 50px;
+      margin-left: 0px;
+      margin-bottom: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      vertical-align: top;
+      font-size: 24px;
+      font-family: 'helveticabold';
+      line-height: 30px;
+      background: url("../images/caixas_btn_filmes.svg") no-repeat;
+      color: #1f2b4e;
+      cursor: pointer; }
+      .btnVideos ul li.selectedBtn {
+        background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
+        color: #ffffff; }
+      .btnVideos ul li:hover {
+        background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
+        color: #ffffff; }
+      .btnVideos ul li:nth-child(3n) {
+        margin-right: 0; }
+      .btnVideos ul li:nth-child(n+7) {
+        margin-bottom: 0; }
+
+.nav-bar {
+  width: 100%;
+  background: url("../images/bg-nav.png") repeat-x;
+  height: 79px;
+  position: relative;
   width: 940px; }
-  .btnVideos ul li {
-    width: 252px;
-    height: 112px;
-    background: red;
-    margin-right: 50px;
-    margin-left: 0px;
-    margin-bottom: 15px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: top;
-    font-size: 24px;
-    font-family: 'helveticabold';
-    line-height: 30px;
-    background: url("../images/caixas_btn_filmes.svg") no-repeat;
-    color: #1f2b4e;
+  .nav-bar div {
+    width: 70px;
+    height: 70px;
+    position: absolute;
     cursor: pointer; }
-    .btnVideos ul li.selectedBtn {
-      background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
-      color: #ffffff; }
-    .btnVideos ul li:hover {
-      background: url("../images/caixas_btn_filmes_hover.svg") no-repeat;
-      color: #ffffff; }
-    .btnVideos ul li:nth-child(3n) {
-      margin-right: 0; }
-    .btnVideos ul li:nth-child(n+7) {
-      margin-bottom: 0; }
+    .nav-bar div.home {
+      left: 70px;
+      background: url("../images/bt-home.png") no-repeat; }
+      .nav-bar div.home:hover {
+        background: url("../images/bt-home-hover.png") no-repeat; }
+      .nav-bar div.home.selectedNav {
+        background: url("../images/bt-home-hover.png") no-repeat; }
+    .nav-bar div.pt {
+      right: 175px;
+      background: url("../images/bt-pt.png") no-repeat; }
+      .nav-bar div.pt:hover {
+        background: url("../images/bt-pt-hover.png") no-repeat; }
+      .nav-bar div.pt.selectedNav {
+        background: url("../images/bt-pt-hover.png") no-repeat; }
+    .nav-bar div.uk {
+      right: 70px;
+      background: url("../images/bt-uk.png") no-repeat; }
+      .nav-bar div.uk:hover {
+        background: url("../images/bt-uk-hover.png") no-repeat; }
+      .nav-bar div.uk.selectedNav {
+        background: url("../images/bt-uk-hover.png") no-repeat; }
 
 /*# sourceMappingURL=style-mc.css.map */
