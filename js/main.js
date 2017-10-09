@@ -3,9 +3,12 @@ $(document).ready(function(){
 	$( ".btnVideos li" ).click(function() {
 	  	var id = $(this).attr('id');
 	  	//alert(id);
-	  	if (id == 'foto5' || id == 'foto6' || id == 'foto9') {
+	  	$('.btnVideos li[id^="video"]').removeClass('selectedBtn');
+	  	if (id == 'video5' || id == 'video6' || id == 'video9') {
+	  		
+	  		
 	  		var imgURL;
-	  		if (id == 'foto6') {
+	  		if (id == 'video6') {
 				imgURL = 'video/'+ id + '.gif';
 	  		}else{
 	  			imgURL = 'video/'+ id + '.jpg';
@@ -14,6 +17,8 @@ $(document).ready(function(){
 	  		$(".video").css('display', 'none');
 	  		$(".foto").css('display', 'block');
 	  		$(".foto img").attr('src', imgURL);
+
+	  		$(this).addClass('selectedBtn');
 
 	  	}else{
 	  		$(".foto").css('display', 'none');
