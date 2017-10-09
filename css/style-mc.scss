@@ -71,6 +71,20 @@ h1{
 	}
 }
 
+.foto{
+	display:none;
+	width: 940px;
+	height: 527px;
+	background: #ebebeb;
+	position: relative;
+	margin-bottom: 80px;
+
+	img{
+		width: 100%;
+	}
+
+}
+
 .btnVideos{
     margin-bottom: 60px;
 	ul{
