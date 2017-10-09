@@ -28,8 +28,19 @@ $(document).ready(function(){
 
 	});
 
+	//Fixed Hover Interaction on nav-bar
+	$( ".nav-bar div" ).click(function() {
+		var classDiv = $(this).attr('class');
+		//Para quando se clicar na home não tirar a seleção da lingua
+		if (classDiv != 'home') {
+			$(".nav-bar div").removeClass('selectedNav');
+		}
+		
+		$(this).addClass('selectedNav');
+	});
 });
 
 function load_home(divConteudo, htmlFile) {
      document.getElementById( divConteudo ).innerHTML='<object type="text/html" data="' + htmlFile + '" ></object>';
 }
+
