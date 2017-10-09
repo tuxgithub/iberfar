@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/ho.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="css/ho.css">
@@ -16,42 +16,15 @@
 
 		
 		<div class="col-xs-12 wrapper-grupo">
-			<div class="title-article ">
-				
-			</div>
+			<div class="title-article "></div>
 
-			<p>
-					Ferraz, Lynce, Especialidades Farmacêuticas, S.A. teve a sua
-					origem como agente da empresa alemã Boehringer Mannheim
-					que procurava um representante em Portugal. Iniciou a sua
-					actividade em 1924. Desenvolvendo um trabalho rigoroso
-					e de excelência, rapidamente conseguiu obter representação
-					de outras empresas farmacêuticas, enquanto a Boehringer
-					Mannheim atingia grande crescimento e desenvolvimento
-					científico com os anti-hipertensores, anti-diabéticosorais
-					e testes bioquímicos promovidos pelo Ferraz, Lynce,
-					Especialidades Farmacêuticas, S.A.<br><br>
-					No decorrer do crescimento da posição do Ferraz, Lynce,
-					Especialidades Farmacêuticas, S.A. no que se refere à promoção
-					de produtos estrangeiros em Portugal, foi adquirida a Farmácia
-					Internacional. Com a colaboração de técnicos alemães iniciou
-					a produção de produtos próprios.<br><br>
-					O desenvolvimento de produtos próprios cresceu mais do que
-					era possível fabricar na Farmácia Internacional o que levou
-					à contratação de terceiros para os fabricarem. A produção atingiu
-					uma dimensão que justificava a criação/implementação de uma
-					fábrica de especialidades farmacêuticas, “nascendo” assim
-					o Laboratório Iberfar – Produtos Farmacêuticos, S.A.
-					– na Avenida Defensores Chaves - que iniciou a sua actividade em 1951.
-
-					{{lang.getText("name")}}
-			<p>
-			<div class="nav-bar" ng-app="app" ng-controller="controller" >
+			<p></p>
+			<div class="nav-bar">
 
 				<img src="images/bt-home.png">
-				<img src="images/bt-next.png">
-				<img src="images/bt-pt.png">
-				<img src="images/bt-uk.png">
+				<img id="navigator" onclick="nextPage()" src="images/bt-next.png">
+				<img onclick="setLangContent('pt')" src="images/bt-pt.png">
+				<img onclick="setLangContent('en')" src="images/bt-uk.png">
 			</div>
 		</div>
 
