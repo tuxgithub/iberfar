@@ -24,6 +24,8 @@ $(document).ready(function(){
 
 
 function nextPage(){
+	$('html, body').animate({scrollTop:$('body').offset().top});
+	
 
 	if(currPage==1){
 		currPage=2;
@@ -57,7 +59,7 @@ function nextPage(){
 
 function setLangContent(lang){
 
-	$('html, body').animate({scrollTo:$('.wrapper-grupo ').offset().top})
+	$('html, body').animate({scrollTop:$('body').offset().top});
 	currLang = lang;
 
 	if(currPage==1){
