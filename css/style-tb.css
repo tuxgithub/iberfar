@@ -17,8 +17,8 @@ html {
     html body .barra-navegacao {
       display: none;
       position: absolute;
-      bottom: 504px;
-      margin-left: 70px; }
+      bottom: 450px;
+      margin: 0 70px; }
       html body .barra-navegacao img {
         width: 100%; }
       html body .barra-navegacao svg {
@@ -38,14 +38,33 @@ html {
     html body .ferrazlynce embed {
       margin-left: 70px; }
     html body .ferrazlynce .frase {
-      align: center;
+      text-align: center;
       margin-top: 84px; }
-    html body .logifarma svg {
-      display: none;
+    html body .ferrazlynce .barra-navegacao {
+      display: block;
+      bottom: 525px; }
+    html body .logifarma .telemarketing-vantagens {
+      display: none; }
+    html body .logifarma .contain img {
+      margin: 70px; }
+    html body .logifarma .seta-dir {
       position: relative;
-      bottom: 50px;
-      right: 70px;
+      top: 6px;
+      left: 870px;
       width: 70px;
       height: 70px; }
+      html body .logifarma .seta-dir path:hover {
+        fill: #ececec; }
+    html body .logifarma .seta-esq {
+      display: none;
+      position: relative;
+      top: 6px;
+      left: 870px;
+      width: 70px;
+      height: 70px; }
+      html body .logifarma .seta-esq path:hover {
+        fill: #ececec; }
+    html body .logifarma .barra-navegacao {
+      display: block; }
 
 /*# sourceMappingURL=style-tb.css.map */
