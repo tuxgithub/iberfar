@@ -2,29 +2,48 @@ $(document).ready(function(){
 
 	$( ".btnVideos li" ).click(function() {
 	  	var id = $(this).attr('id');
-	  	var videoUrl = "video/"+id+".mp4";
+	  	//alert(id);
+	  	if (id == 'foto5' || id == 'foto6' || id == 'foto9') {
+	  		var imgURL;
+	  		if (id == 'foto6') {
+				imgURL = 'video/'+ id + '.gif';
+	  		}else{
+	  			imgURL = 'video/'+ id + '.jpg';
+	  		}
 
-    	var srcAnterior = $(".video video source").attr('src');
+	  		$(".video").css('display', 'none');
+	  		$(".foto").css('display', 'block');
+	  		$(".foto img").attr('src', imgURL);
 
-	  	if (srcAnterior != 'javascript:void(0)') {
-			srcAnterior = srcAnterior.split('/');
-		  	srcAnterior = srcAnterior[1].split('.');
-		  	srcAnterior = srcAnterior[0];
+	  	}else{
+	  		$(".foto").css('display', 'none');
+	  		$(".video").css('display', 'block');
 
-		  	//remove a class do video que foi clicado anteriormente
-			$('#'+srcAnterior).removeClass('selectedBtn');
-	  	}
+		  	var videoUrl = "video/"+id+".mp4";
 
-		//acrescenta a classe ao video que esta a ser tocado
-		$(this).addClass('selectedBtn');
+	    	var srcAnterior = $(".video video source").attr('src');
+
+		  	if (srcAnterior != 'javascript:void(0)') {
+				srcAnterior = srcAnterior.split('/');
+			  	srcAnterior = srcAnterior[1].split('.');
+			  	srcAnterior = srcAnterior[0];
+
+			  	//remove a class do video que foi clicado anteriormente
+				$('#'+srcAnterior).removeClass('selectedBtn');
+		  	}
+
+			//acrescenta a classe ao video que esta a ser tocado
+			$(this).addClass('selectedBtn');
 
 
-		//trocar src do video
-		$(".video video source").attr('src', videoUrl);
-		$(".video video")[0].load();
+			//trocar src do video
+			$(".video video source").attr('src', videoUrl);
+			$(".video video")[0].load();
 
-		//hide play button (css ::after element)
-		$(".video").addClass('changeAfter');
+			//hide play button (css ::after element)
+			$(".video").addClass('changeAfter');
+
+		}
 
 	});
 

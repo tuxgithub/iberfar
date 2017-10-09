@@ -48,6 +48,16 @@ h1 {
   .video:hover:after {
     content: url(../images/btn_play_hover.png); }
 
+.foto {
+  display: none;
+  width: 940px;
+  height: 527px;
+  background: #ebebeb;
+  position: relative;
+  margin-bottom: 80px; }
+  .foto img {
+    width: 100%; }
+
 .btnVideos {
   margin-bottom: 60px; }
   .btnVideos ul {
