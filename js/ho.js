@@ -20,35 +20,64 @@ $(document).ready(function(){
 	$('.title-article').html(ptContent.title);
 	$('.wrapper-grupo p').html(ptContent.p1);
 
+
+	//Fixed Hover Interaction on nav-bar
+	$( ".nav-bar div.pt , .nav-bar div.uk" ).click(function() {
+		var classDiv = $(this).attr('class');
+		//Para quando se clicar na home não tirar a seleção da lingua
+		if (classDiv != 'pt' ) {
+			$(".nav-bar div.pt").removeClass('selectedNav');
+		}else{
+			$(".nav-bar div.uk").removeClass('selectedNav');
+		}
+		
+		$(this).addClass('selectedNav');
+	});
+
 });
 
 
 function nextPage(){
 	$('html, body').animate({scrollTop:$('body').offset().top});
 	
-
 	if(currPage==1){
 		currPage=2;
-		if(currLang=='pt'){
-				$('.wrapper-grupo p').html(ptContent.p2);
-		} else {
-			$('.wrapper-grupo p').html(enContent.p2);
 
+		if(currLang=='pt'){
+			$('.wrapper-grupo .title-article').html(ptContent.title);
+			$('.wrapper-grupo p').html(ptContent.p2);
+
+			$(".nav-bar div").removeClass('selectedNav');
+			$(".nav-bar div.pt").addClass('selectedNav');
+		} else {
+			$('.wrapper-grupo .title-article').html(enContent.title);
+			$('.wrapper-grupo p').html(enContent.p2);
+			
+			$(".nav-bar div").removeClass('selectedNav');
+			$(".nav-bar div.uk").addClass('selectedNav');
 		}
 			
-		$('#navigator').attr('src','images/bt-prev.png');
+		$('#navigator').addClass('prev');
+		
 	}
 		
 	 else { 
 		currPage=1;
 		if(currLang=='pt'){
-
+			$('.wrapper-grupo .title-article').html(ptContent.title);
 			$('.wrapper-grupo p').html(ptContent.p1);
+
+			$(".nav-bar div").removeClass('selectedNav');
+			$(".nav-bar div.pt").addClass('selectedNav');
 		} else {
+			$('.wrapper-grupo .title-article').html(enContent.title);
 			$('.wrapper-grupo p').html(enContent.p1);
 
+			$(".nav-bar div").removeClass('selectedNav');
+			$(".nav-bar div.uk").addClass('selectedNav');
 		}
-		$('#navigator').attr('src','images/bt-next.png');
+		
+		$('#navigator').removeClass('prev');
 
 
 	}
@@ -66,17 +95,20 @@ function setLangContent(lang){
 	
 		if(currLang=='pt'){
 			//alert('ou mudaar')
+			$('.wrapper-grupo .title-article').html(ptContent.title);
 			$('.wrapper-grupo p').html(ptContent.p1);
 		} else {
+			$('.wrapper-grupo .title-article').html(enContent.title);
 			$('.wrapper-grupo p').html(enContent.p1);
-
 		}
 
 	} else {
 		if(currLang=='pt'){
 			//alert('ou mudaar')
+			$('.wrapper-grupo .title-article').html(ptContent.title);
 			$('.wrapper-grupo p').html(ptContent.p2);
 		} else {
+			$('.wrapper-grupo .title-article').html(enContent.title);
 			$('.wrapper-grupo p').html(enContent.p2);
 
 		}
