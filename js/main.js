@@ -23,6 +23,7 @@ $(document).ready(function(){
 	  	}else{
 	  		$(".foto").css('display', 'none');
 	  		$(".video").css('display', 'block');
+	  		$(".video video").css('display', 'block');
 
 		  	var videoUrl = "video/"+id+".mp4";
 
@@ -51,6 +52,13 @@ $(document).ready(function(){
 		}
 
 	});
+
+	// Quado acabar o video volta a mostrar a area cinza c botão de play
+	$('.video video').on('ended',function(){
+      $(this).css('display', 'none');
+      $(".video").removeClass('changeAfter');
+
+    });
 
 	//Fixed Hover Interaction on nav-bar
 	$( ".nav-bar div" ).click(function() {
