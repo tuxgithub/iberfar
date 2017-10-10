@@ -35,17 +35,26 @@ html{
 			}
 			svg{
 				position: relative;
-				bottom: 50px;
+				bottom: 51px;
 				left: 70px;
 				width: 70px;
 				height: 70px;
-				g{
-					path{
-						&:hover{
+
+				&:hover{
+
+					g{
+						path{
+							
 							fill: #eaeaea;
+							
+							&.st6{
+								fill: #ffffff;							
+							}
 						}
 					}
+
 				}
+				
 			}
 		}
 
@@ -88,26 +97,32 @@ html{
 			.seta-dir{
 				// display: none;
 				position: relative;
-			    top: 6px;
+			    top: 0px;
     			left: 870px;
 				width: 70px;
 				height: 70px;
-				path{
-					&:hover{
-						fill: #ececec;
+				cursor: pointer;
+				&:hover{
+					path{
+						&.st1{
+							fill: #ececec;
+						}
 					}
 				}
 			}
 			.seta-esq{
 				display: none;
 				position: relative;
-			    top: 6px;
+			    top: 0px;
     			left: 870px;
 				width: 70px;
 				height: 70px;
-				path{
-					&:hover{
-						fill: #ececec;
+				cursor: pointer;
+				&:hover{
+					path{
+						&.st1{
+							fill: #ececec;
+						}
 					}
 				}
 			}

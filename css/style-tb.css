@@ -23,12 +23,14 @@ html {
         width: 100%; }
       html body .barra-navegacao svg {
         position: relative;
-        bottom: 50px;
+        bottom: 51px;
         left: 70px;
         width: 70px;
         height: 70px; }
-        html body .barra-navegacao svg g path:hover {
+        html body .barra-navegacao svg:hover g path {
           fill: #eaeaea; }
+          html body .barra-navegacao svg:hover g path.st6 {
+            fill: #ffffff; }
     html body .ferrazlynce .logo {
       width: 100%;
       align: center;
@@ -49,20 +51,22 @@ html {
       margin: 70px; }
     html body .logifarma .seta-dir {
       position: relative;
-      top: 6px;
+      top: 0px;
       left: 870px;
       width: 70px;
-      height: 70px; }
-      html body .logifarma .seta-dir path:hover {
+      height: 70px;
+      cursor: pointer; }
+      html body .logifarma .seta-dir:hover path.st1 {
         fill: #ececec; }
     html body .logifarma .seta-esq {
       display: none;
       position: relative;
-      top: 6px;
+      top: 0px;
       left: 870px;
       width: 70px;
-      height: 70px; }
-      html body .logifarma .seta-esq path:hover {
+      height: 70px;
+      cursor: pointer; }
+      html body .logifarma .seta-esq:hover path.st1 {
         fill: #ececec; }
     html body .logifarma .barra-navegacao {
       display: block; }
