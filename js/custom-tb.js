@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
 	$('.menu').hover(function(){
 		$('.barra-navegacao').css('display', 'block');
 

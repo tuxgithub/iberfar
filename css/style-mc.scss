@@ -191,3 +191,23 @@ h1{
 
 }
 
+/**********************
+	CLOSE BUTTON
+*******************/
+
+.close-window{    
+	width: 39px;
+    height: 40px;
+    overflow: hidden;
+    background: red;
+    position: absolute;
+    top: 20px;
+
+    left: 20px;
+    img{
+    	margin-left:-1px;
+    }
+
+
+}   
+

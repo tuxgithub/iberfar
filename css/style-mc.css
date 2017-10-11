@@ -124,4 +124,18 @@ h1 {
       .nav-bar div.uk.selectedNav {
         background: url("../images/bt-uk-hover.png") no-repeat; }
 
+/**********************
+	CLOSE BUTTON
+*******************/
+.close-window {
+  width: 39px;
+  height: 40px;
+  overflow: hidden;
+  background: red;
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+  .close-window img {
+    margin-left: -1px; }
+
 /*# sourceMappingURL=style-mc.css.map */
